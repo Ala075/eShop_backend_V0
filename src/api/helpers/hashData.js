@@ -13,10 +13,10 @@ const hashData = async (data) => {
   }
 };
 
-const InhashData = async (data, prev) => {
+const InhashData = async (data, hash) => {
   try {
-    console.log("pwd: ",prev)
-    const InhashedData = await bcrypt.compare(data,prev);
+    console.log("pwd: ",hash)
+    const InhashedData = await bcrypt.compare(data,hash);
 
     return InhashedData;
   } catch (error) {
