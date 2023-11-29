@@ -38,7 +38,7 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-const addUser = async (req, res) => {
+/* const addUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
@@ -66,7 +66,7 @@ const addUser = async (req, res) => {
       res.status(500).json({ success: false, error: error.message });
     }
   }
-};
+}; */
 
 const updateUserById = async (req, res) => {
   const { id } = req.params;

@@ -20,7 +20,6 @@ const userSchema = new Schema({
     type: String,
     required: [true, "Password is required."],
     minlength: [6, "Password must be at least 6 characters long."],
-    select: false,
   },
   role: {
     type: String,
@@ -49,8 +48,6 @@ userSchema.pre("save", async function (next) {
 userSchema.statics.login = async function (email, password) {
   try {
     const user = await this.findOne({ email });
-    
-    console.log(user);
 
     if (user) {
       if (!user.password) {
@@ -68,10 +65,9 @@ userSchema.statics.login = async function (email, password) {
       throw new Error("Invalid email!");
     }
   } catch (error) {
-    throw new Error(`Login error: ${error.message}`);
+    throw new Error(`Login error ${error.message}`);
   }
 };
-
 
 const User = mongoose.model("User", userSchema);
 
