@@ -42,7 +42,7 @@ const addProduct = async (req, res) => {
   const { name, description, price, imageUrl, category } = req.body;
   
   if (!name || !description || !price || !imageUrl || !category ) {
-    return res.status(40p).json({
+    return res.status(400).json({
       success: false,
       error: "Name, Description, Price, imageUrl and Category are required.",
     });

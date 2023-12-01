@@ -115,4 +115,4 @@ const deleteUserById = async (req, res) => {
   }
 };
 
-export { getAllUsers, getUserById, addUser, updateUserById, deleteUserById };
+export { getAllUsers, getUserById, updateUserById, deleteUserById };

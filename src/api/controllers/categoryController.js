@@ -42,13 +42,13 @@ const addCategory = async (req, res) => {
   const { name, description, imageUrl } = req.body;
   
   if (!name || !description || !imageUrl ) {
-    return res.status(40p).json({
+    return res.status(400).json({
       success: false,
       error: "Name, Description and imageUrl are required.",
     });
   }
   try {
-    const newCategory = new Category({ name, description imageUrl });
+    const newCategory = new Category({ name, description, imageUrl });
 
     await Category.save();
 
