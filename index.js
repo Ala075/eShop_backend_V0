@@ -33,9 +33,9 @@ app.use("/Categories", categoryRouter);
 //product Router
 app.use("/Products", productRouter);
 //generateOTP
-app.use("/", generateOTProuter);
+app.use("/OTP", generateOTProuter);
 
-app.get("api/",(req,res) => {
+app.get("/",(req,res) => {
     res.send("Welcome, In Our Server !")
 })
 
