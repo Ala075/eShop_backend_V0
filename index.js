@@ -35,7 +35,7 @@ app.use("/Products", productRouter);
 //generateOTP
 app.use("/", generateOTProuter);
 
-app.get("/",(req,res) => {
+app.get("api/",(req,res) => {
     res.send("Welcome, In Our Server !")
 })
 
