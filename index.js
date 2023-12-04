@@ -35,6 +35,10 @@ app.use("/Products", productRouter);
 //generateOTP
 app.use("/", generateOTProuter);
 
+app.get("/",(req,res) => {
+    res.send("Welcome, In Our Server !")
+})
+
 //DataBase connexion
 const db = await Connect_DB();
 if (db) {
